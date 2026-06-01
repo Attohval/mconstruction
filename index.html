@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elite Construction - Premier Construction & Property Management Services">
+    <meta name="description" content="MConstruction - Premier Construction & Property Management Services">
     <meta name="theme-color" content="#E63946">
-    <title>Elite Construction - Premium Building Solutions</title>
+    <title>MConstruction - Premium Building Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
-                <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="Elite Construction Logo">
+                <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="MConstruction Logo">
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link active" data-page="home" onclick="goToPage('home'); return false;">Home</a></li>
@@ -34,7 +34,7 @@
                 <li><a href="services.html" class="nav-link" data-page="services" onclick="goToPage('services'); return false;">Services</a></li>
                 <li><a href="projects.html" class="nav-link" data-page="projects" onclick="goToPage('projects'); return false;">Projects</a></li>
                 <li><a href="team.html" class="nav-link" data-page="team" onclick="goToPage('team'); return false;">Team</a></li>
-                <li><a href="testimonials.html" class="nav-link" data-page="testimonials" onclick="goToPage('testimonials'); return false;">Testimonials</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -52,23 +52,23 @@
         <section class="hero">
             <div class="carousel">
                 <div class="carousel-slide active">
-                    <img src="https://images.unsplash.com/photo-1504917595217-e4dc5eda6122?w=1200&h=800&fit=crop" alt="Modern construction site">
+                    <img src="images/hero-construction-site.png" alt="High-rise construction site with crane">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop" alt="Building exterior">
+                    <img src="images/hero-property-management.png" alt="Managed commercial property portfolio">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop" alt="Interior design">
+                    <img src="images/hero-residential-development.png" alt="Residential estate development">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=800&fit=crop" alt="Road construction">
+                    <img src="images/hero-road-infrastructure.png" alt="Road and infrastructure construction">
                     <div class="carousel-overlay"></div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop" alt="Project planning">
+                    <img src="images/hero-interior-fitout.png" alt="Interior fit-out and facility upgrade">
                     <div class="carousel-overlay"></div>
                 </div>
 
@@ -101,7 +101,7 @@
                     <div class="about-text">
                         <h3>Why Choose Us?</h3>
                         <h2>Excellence in Every Project</h2>
-                        <p>With over 20 years of experience in the construction industry, Elite Construction has established itself as a leader in delivering world-class projects. Our commitment to quality, innovation, and customer satisfaction sets us apart.</p>
+                        <p>With over 20 years of experience in the construction industry, MConstruction has established itself as a leader in delivering world-class projects. Our commitment to quality, innovation, and customer satisfaction sets us apart.</p>
                         <p>We believe in building lasting relationships with our clients through transparency, reliability, and exceptional craftsmanship.</p>
                         <div class="feature-list">
                             <div class="feature-item">
@@ -236,7 +236,7 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="section" style="background: var(--gray-light);">
+        <section id="testimonials" class="section" style="background: var(--gray-light);">
             <div class="container">
                 <div class="section-title reveal">
                     <h2>What Our Clients Say</h2>
@@ -251,7 +251,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>"Elite Construction delivered our project exactly as promised. Their professionalism and attention to detail are exceptional. Highly recommended!"</p>
+                        <p>"MConstruction delivered our project exactly as promised. Their professionalism and attention to detail are exceptional. Highly recommended!"</p>
                         <div class="testimonial-author">
                             <img src="https://i.pravatar.cc/50?img=1" alt="Client" class="testimonial-avatar">
                             <div class="testimonial-info">
@@ -268,7 +268,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>"Working with Elite Construction was a game-changer. Their team brought our vision to life with precision and innovation. Outstanding service!"</p>
+                        <p>"Working with MConstruction was a game-changer. Their team brought our vision to life with precision and innovation. Outstanding service!"</p>
                         <div class="testimonial-author">
                             <img src="https://i.pravatar.cc/50?img=2" alt="Client" class="testimonial-avatar">
                             <div class="testimonial-info">
@@ -305,6 +305,77 @@
                     <h2>Ready to Start Your Project?</h2>
                     <p>Let's work together to turn your vision into reality</p>
                     <button class="btn btn-secondary" onclick="goToPage('contact')">Get in Touch</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about our services and processes</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item active reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do I request a quote for my project?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Requesting a quote is simple! You can fill out our contact form on the website, call us at +1 (555) 123-4567, or visit our office. Our team will review your project requirements and provide a detailed quote within 48 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What is the typical timeline for a construction project?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Project timelines vary based on scope and complexity. Residential projects typically take 6-12 months, while commercial projects may take 12-24 months. We'll provide a detailed timeline during the initial consultation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Do you offer warranty on completed projects?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer comprehensive warranties on all our projects. Structural elements typically come with a 10-year warranty, while other components have 1-5 year warranties depending on the type. Details are included in your contract.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do you ensure quality control during construction?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Quality is our top priority. We implement rigorous quality control procedures including daily inspections, regular testing, material verification, and compliance checks. Our dedicated QA team ensures every aspect meets our high standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Are your projects environmentally friendly?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sustainability is core to our values. We use eco-friendly materials, implement waste reduction programs, and follow green building standards. Many of our projects are LEED certified or use similar sustainable practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Do you handle permits and regulatory requirements?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we handle all permitting, regulatory compliance, and legal requirements. Our experienced team knows local building codes and regulations, ensuring smooth approval processes and compliance throughout the project.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -378,7 +449,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <a href="index.html" class="footer-logo" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
-                        <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="Elite Construction Logo">
+                        <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="MConstruction Logo">
                     </a>
                     <p>Premier construction and property management services delivering excellence since 2003.</p>
                     <div class="social-links">
@@ -422,7 +493,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Elite Construction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+                <p>&copy; 2024 MConstruction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
             </div>
         </div>
     </footer>

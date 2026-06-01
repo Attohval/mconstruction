@@ -74,8 +74,8 @@
         // Carousel
         let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.carousel-slide');
-        const heroTitles = ['Building Your Dreams', 'Premium Quality', 'Excellence in Service', 'Trusted Partner', 'Your Vision, Our Mission'];
-        const heroSubtitles = ['Premium Construction & Property Management Services', 'Delivering world-class construction solutions', 'Over 20 years of experience', 'Join 1200+ satisfied clients', 'Let\'s build something amazing together'];
+        const heroTitles = ['Construction That Holds Up', 'Property Management Made Simple', 'Residential Developments', 'Roads & Infrastructure', 'Interior Fit-Outs'];
+        const heroSubtitles = ['Reliable building delivery from site prep to handover', 'Commercial assets maintained, leased, and managed with care', 'Modern housing projects planned for comfort and long-term value', 'Durable civil works built for movement, access, and growth', 'Functional interiors finished with precision and project discipline'];
 
         function showSlide(index) {
             if (!slides.length) {
