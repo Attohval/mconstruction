@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Construction - Premier Construction & Property Management Services">
+    <meta name="theme-color" content="#E63946">
+    <title>Projects - Elite Construction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p style="color: var(--primary-color); font-weight: 600;">MConstruction</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="Elite Construction Logo">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link" data-page="home" onclick="goToPage('home'); return false;">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about" onclick="goToPage('about'); return false;">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services" onclick="goToPage('services'); return false;">Services</a></li>
+                <li><a href="projects.html" class="nav-link active" data-page="projects" onclick="goToPage('projects'); return false;">Projects</a></li>
+                <li><a href="team.html" class="nav-link" data-page="team" onclick="goToPage('team'); return false;">Team</a></li>
+                <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Page -->
+
+    <div id="projects" class="page active">
+        <section class="section" style="margin-top: 60px;">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Our Projects</h2>
+                    <p>Explore our impressive portfolio of completed and ongoing projects</p>
+                </div>
+
+                <div class="filter-buttons reveal">
+                    <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+                    <button class="filter-btn" onclick="filterProjects('commercial')">Commercial</button>
+                    <button class="filter-btn" onclick="filterProjects('residential')">Residential</button>
+                    <button class="filter-btn" onclick="filterProjects('infrastructure')">Infrastructure</button>
+                    <button class="filter-btn" onclick="filterProjects('renovation')">Renovation</button>
+                </div>
+
+                <div class="grid-3 reveal" id="projectsGrid">
+                    <div class="project-item" data-category="commercial">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=300&fit=crop" alt="Modern Office Complex">
+                        <div class="project-overlay">
+                            <h3>Modern Office Complex</h3>
+                            <p>Commercial Building | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Modern Office Complex', 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop', 'A stunning 50-story commercial complex featuring modern architecture, sustainable design, and state-of-the-art amenities. This landmark building represents the pinnacle of contemporary commercial construction.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="residential">
+                        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=300&fit=crop" alt="Luxury Residential Tower">
+                        <div class="project-overlay">
+                            <h3>Luxury Residential Tower</h3>
+                            <p>Residential | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Luxury Residential Tower', 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop', 'An exquisite 35-story residential tower featuring 250 luxury apartments with premium finishes. World-class amenities including spa, gym, and concierge services. Completed on schedule and within budget.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="commercial">
+                        <img src="https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=400&h=300&fit=crop" alt="Urban Development">
+                        <div class="project-overlay">
+                            <h3>Urban Development Zone</h3>
+                            <p>Mixed-Use | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Urban Development Zone', 'https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=800&h=600&fit=crop', 'A comprehensive urban development project featuring retail, residential, and office spaces. This landmark transformation of the city center created a vibrant mixed-use community.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="infrastructure">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Highway Construction">
+                        <div class="project-overlay">
+                            <h3>Highway Expansion</h3>
+                            <p>Infrastructure | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Highway Expansion', 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop', 'A major 50km highway expansion project improving regional connectivity. Implemented advanced road construction techniques and strict safety standards throughout the project.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="renovation">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" alt="Heritage Building Restoration">
+                        <div class="project-overlay">
+                            <h3>Heritage Building Restoration</h3>
+                            <p>Renovation | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Heritage Building Restoration', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop', 'Careful restoration of a historic 100-year-old building preserving its architectural heritage while adding modern amenities and infrastructure.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="residential">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Suburban Community">
+                        <div class="project-overlay">
+                            <h3>Suburban Community Complex</h3>
+                            <p>Residential | 2023</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Suburban Community Complex', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop', 'A large suburban development featuring 500 family homes, community centers, parks, and recreational facilities creating a vibrant community.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="stats">
+            <div class="container">
+                <div class="grid-4">
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="500">0</span>+</h3>
+                        <p>Completed Projects</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="98">0</span>%</h3>
+                        <p>On-Time Delivery</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="99">0</span>%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="20">0</span>M+</h3>
+                        <p>Sq Ft Constructed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                        <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="Elite Construction Logo">
+                    </a>
+                    <p>Premier construction and property management services delivering excellence since 2003.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" onclick="goToPage('home'); return false;">Home</a></li>
+                        <li><a href="about.html" onclick="goToPage('about'); return false;">About Us</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Services</a></li>
+                        <li><a href="projects.html" onclick="goToPage('projects'); return false;">Projects</a></li>
+                        <li><a href="contact.html" onclick="goToPage('contact'); return false;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Building Construction</a></li>
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest projects and industry news.</p>
+                    <form onsubmit="submitNewsletter(event)" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" required style="flex: 1; padding: 0.6rem; border: none; border-radius: 4px;">
+                        <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: var(--transition);" onmouseover="this.transform='scale(1.05)'" onmouseout="this.transform='scale(1)'">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite Construction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="modal-close" onclick="closeProjectModal()">Ã—</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                <p id="modalDescription">Project description goes here.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
+                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact'); closeProjectModal();">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

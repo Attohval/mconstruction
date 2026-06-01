@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Construction - Premier Construction & Property Management Services">
+    <meta name="theme-color" content="#E63946">
+    <title>About - Elite Construction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p style="color: var(--primary-color); font-weight: 600;">MConstruction</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="Elite Construction Logo">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link" data-page="home" onclick="goToPage('home'); return false;">Home</a></li>
+                <li><a href="about.html" class="nav-link active" data-page="about" onclick="goToPage('about'); return false;">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services" onclick="goToPage('services'); return false;">Services</a></li>
+                <li><a href="projects.html" class="nav-link" data-page="projects" onclick="goToPage('projects'); return false;">Projects</a></li>
+                <li><a href="team.html" class="nav-link" data-page="team" onclick="goToPage('team'); return false;">Team</a></li>
+                <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Page -->
+
+    <div id="about" class="page active">
+        <section class="section" style="margin-top: 60px;">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>About MConstruction</h2>
+                    <p>Leading the construction industry with innovation and excellence</p>
+                </div>
+                <div class="about-content reveal">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=600&fit=crop" alt="Company office">
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2003, MConstruction began with a simple mission: to deliver exceptional building solutions with integrity and excellence. Over the past two decades, we have grown into one of the most trusted construction companies in the region.</p>
+                        <p>Our success is built on three core pillars: our talented team, cutting-edge technology, and unwavering commitment to client satisfaction. Every project we undertake reflects our dedication to quality and innovation.</p>
+                        <p>Today, with over 200 team members and 500+ completed projects, we continue to set new standards in the construction industry.</p>
+                        <div class="feature-list" style="margin-top: 2rem;">
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <span>Award-winning design and engineering</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-users"></i>
+                                <span>Experienced and certified professionals</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Sustainable and eco-friendly practices</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Our Core Values</h2>
+                    <p>The principles that guide everything we do</p>
+                </div>
+                <div class="grid-4 reveal">
+                    <div class="service-card">
+                        <i class="fas fa-handshake service-icon"></i>
+                        <h3>Integrity</h3>
+                        <p>We operate with complete transparency and honesty in all our dealings with clients and partners.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-star service-icon"></i>
+                        <h3>Excellence</h3>
+                        <p>We pursue excellence in every aspect of our work, from planning to completion.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb service-icon"></i>
+                        <h3>Innovation</h3>
+                        <p>We embrace new technologies and methods to improve our services continuously.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-earth-americas service-icon"></i>
+                        <h3>Sustainability</h3>
+                        <p>We're committed to environmentally responsible building practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Our Journey</h2>
+                    <p>Milestones that shaped MConstruction</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item active reveal" style="margin-bottom: 1rem;">
+                        <div class="faq-question">
+                            <span>2003 - Company Founded</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>MConstruction was established with a vision to revolutionize the construction industry through innovation and excellence.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" style="margin-bottom: 1rem;">
+                        <div class="faq-question">
+                            <span>2010 - 100 Projects Milestone</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We celebrated completing our 100th project, establishing ourselves as a leading construction company.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" style="margin-bottom: 1rem;">
+                        <div class="faq-question">
+                            <span>2015 - International Expansion</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We expanded our operations internationally, bringing our expertise to global clients.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" style="margin-bottom: 1rem;">
+                        <div class="faq-question">
+                            <span>2020 - Sustainability Certification</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Achieved ISO certification for sustainable and environmentally friendly construction practices.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <div class="faq-question">
+                            <span>2024 - 500+ Projects Achieved</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Reached the milestone of 500+ successfully completed projects worldwide with continued excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                        <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="Elite Construction Logo">
+                    </a>
+                    <p>Premier construction and property management services delivering excellence since 2003.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" onclick="goToPage('home'); return false;">Home</a></li>
+                        <li><a href="about.html" onclick="goToPage('about'); return false;">About Us</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Services</a></li>
+                        <li><a href="projects.html" onclick="goToPage('projects'); return false;">Projects</a></li>
+                        <li><a href="contact.html" onclick="goToPage('contact'); return false;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Building Construction</a></li>
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest projects and industry news.</p>
+                    <form onsubmit="submitNewsletter(event)" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" required style="flex: 1; padding: 0.6rem; border: none; border-radius: 4px;">
+                        <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: var(--transition);" onmouseover="this.transform='scale(1.05)'" onmouseout="this.transform='scale(1)'">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite Construction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="modal-close" onclick="closeProjectModal()">Ã—</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                <p id="modalDescription">Project description goes here.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
+                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact'); closeProjectModal();">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

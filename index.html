@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Construction - Premier Construction & Property Management Services">
+    <meta name="theme-color" content="#E63946">
+    <title>Elite Construction - Premium Building Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p style="color: var(--primary-color); font-weight: 600;">MConstruction</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="Elite Construction Logo">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active" data-page="home" onclick="goToPage('home'); return false;">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about" onclick="goToPage('about'); return false;">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services" onclick="goToPage('services'); return false;">Services</a></li>
+                <li><a href="projects.html" class="nav-link" data-page="projects" onclick="goToPage('projects'); return false;">Projects</a></li>
+                <li><a href="team.html" class="nav-link" data-page="team" onclick="goToPage('team'); return false;">Team</a></li>
+                <li><a href="testimonials.html" class="nav-link" data-page="testimonials" onclick="goToPage('testimonials'); return false;">Testimonials</a></li>
+                <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+
+    <div id="home" class="page active">
+        <!-- Hero Section with Carousel -->
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1504917595217-e4dc5eda6122?w=1200&h=800&fit=crop" alt="Modern construction site">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop" alt="Building exterior">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop" alt="Interior design">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=800&fit=crop" alt="Road construction">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop" alt="Project planning">
+                    <div class="carousel-overlay"></div>
+                </div>
+
+                <div class="carousel-content">
+                    <h1 id="heroTitle">Building Your Dreams</h1>
+                    <p id="heroSubtitle">Premium Construction & Property Management Services</p>
+                    <div class="carousel-buttons">
+                        <button class="btn btn-primary" onclick="goToPage('contact')">Get a Quote</button>
+                        <button class="btn btn-secondary" onclick="goToPage('projects')">Our Projects</button>
+                    </div>
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(0)"></span>
+                    <span class="indicator" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <div class="container">
+                <div class="about-content reveal">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=600&fit=crop" alt="Company office">
+                    </div>
+                    <div class="about-text">
+                        <h3>Why Choose Us?</h3>
+                        <h2>Excellence in Every Project</h2>
+                        <p>With over 20 years of experience in the construction industry, Elite Construction has established itself as a leader in delivering world-class projects. Our commitment to quality, innovation, and customer satisfaction sets us apart.</p>
+                        <p>We believe in building lasting relationships with our clients through transparency, reliability, and exceptional craftsmanship.</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>20+ Years of Industry Experience</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>500+ Successfully Completed Projects</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Award-Winning Design & Engineering</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Certified & Insured Professionals</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>On-Time & On-Budget Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services -->
+        <section class="section" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive construction and property management solutions tailored to your needs</p>
+                </div>
+                <div class="grid-3">
+                    <div class="service-card reveal">
+                        <i class="fas fa-home service-icon"></i>
+                        <h3>Building Construction</h3>
+                        <p>Modern commercial and residential construction with attention to detail and quality.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-road service-icon"></i>
+                        <h3>Road Construction</h3>
+                        <p>Professional infrastructure and road development using latest technology.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-paint-roller service-icon"></i>
+                        <h3>Interior Design</h3>
+                        <p>Creative interior solutions that combine aesthetics with functionality.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-hammer service-icon"></i>
+                        <h3>Renovation</h3>
+                        <p>Expert renovation and restoration of existing structures with modern upgrades.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-cube service-icon"></i>
+                        <h3>Architecture</h3>
+                        <p>Innovative architectural designs that stand the test of time.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-chart-line service-icon"></i>
+                        <h3>Project Management</h3>
+                        <p>Complete project oversight ensuring efficiency and excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Featured Projects</h2>
+                    <p>Showcasing our most impressive and innovative constructions</p>
+                </div>
+                <div class="grid-3 reveal">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=300&fit=crop" alt="Modern Office Complex">
+                        <div class="project-overlay">
+                            <h3>Modern Office Complex</h3>
+                            <p>State-of-the-art commercial building</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Modern Office Complex', 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop', 'A stunning 50-story commercial complex featuring modern architecture and sustainable design. Completed in 2023.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=300&fit=crop" alt="Luxury Residential Tower">
+                        <div class="project-overlay">
+                            <h3>Luxury Residential Tower</h3>
+                            <p>Premium living spaces with world-class amenities</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Luxury Residential Tower', 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop', 'An exquisite 35-story residential tower featuring 250 luxury apartments with premium finishes and amenities. Completed in 2023.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=400&h=300&fit=crop" alt="Urban Development">
+                        <div class="project-overlay">
+                            <h3>Urban Development Zone</h3>
+                            <p>Mixed-use development transforming the city</p>
+                            <a href="#" class="project-btn" onclick="openProjectModal('Urban Development Zone', 'https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=800&h=600&fit=crop', 'A comprehensive urban development project featuring retail, residential, and office spaces. A landmark transformation of the city center. Completed in 2023.'); return false;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3 reveal">
+                    <button class="btn btn-primary" onclick="goToPage('projects')">View All Projects</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="500">0</span>+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="1200">0</span>+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="200">0</span>+</h3>
+                        <p>Team Members</p>
+                    </div>
+                    <div class="stat-item reveal">
+                        <h3><span class="counter" data-target="20">0</span>+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>What Our Clients Say</h2>
+                    <p>Testimonials from satisfied clients worldwide</p>
+                </div>
+                <div class="grid-3 reveal">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Elite Construction delivered our project exactly as promised. Their professionalism and attention to detail are exceptional. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/50?img=1" alt="Client" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>John Smith</h4>
+                                <p>CEO, Tech Innovations Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with Elite Construction was a game-changer. Their team brought our vision to life with precision and innovation. Outstanding service!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/50?img=2" alt="Client" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Property Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I was impressed with their communication, timeline management, and the final quality of work. They truly care about client satisfaction."</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/50?img=3" alt="Client" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>Michael Chen</h4>
+                                <p>Architect & Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's work together to turn your vision into reality</p>
+                    <button class="btn btn-secondary" onclick="goToPage('contact')">Get in Touch</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Blog Posts -->
+        <section class="section" style="background: var(--gray-light);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Latest News & Insights</h2>
+                    <p>Stay updated with industry trends and project updates</p>
+                </div>
+                <div class="grid-3 reveal">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> June 15, 2024</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <h3>Sustainable Building Practices in 2024</h3>
+                            <p>Explore the latest sustainable construction methods and eco-friendly materials that are revolutionizing the industry.</p>
+                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> June 10, 2024</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <h3>Interior Design Trends That Dominate 2024</h3>
+                            <p>Discover the hottest interior design trends that are transforming modern spaces with innovative styles and layouts.</p>
+                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> June 5, 2024</span>
+                                <span><i class="fas fa-user"></i> Admin</span>
+                            </div>
+                            <h3>Project Management Best Practices</h3>
+                            <p>Learn the strategies and tools that help us deliver projects on time and within budget consistently.</p>
+                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Find Us</h2>
+                    <p>Visit our office or reach out for a consultation</p>
+                </div>
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); height: 400px; margin-bottom: 3rem;" class="reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345094707!2d-122.41941592346883!3d37.77492857123166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1c6e05b%3A0xf1f8f8f8f8f8f8f8!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:none;" allowFullScreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
+                        <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="Elite Construction Logo">
+                    </a>
+                    <p>Premier construction and property management services delivering excellence since 2003.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" onclick="goToPage('home'); return false;">Home</a></li>
+                        <li><a href="about.html" onclick="goToPage('about'); return false;">About Us</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Services</a></li>
+                        <li><a href="projects.html" onclick="goToPage('projects'); return false;">Projects</a></li>
+                        <li><a href="contact.html" onclick="goToPage('contact'); return false;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Building Construction</a></li>
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our latest projects and industry news.</p>
+                    <form onsubmit="submitNewsletter(event)" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" required style="flex: 1; padding: 0.6rem; border: none; border-radius: 4px;">
+                        <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: var(--transition);" onmouseover="this.transform='scale(1.05)'" onmouseout="this.transform='scale(1)'">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite Construction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="modal-close" onclick="closeProjectModal()">Ã—</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                <p id="modalDescription">Project description goes here.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
+                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact'); closeProjectModal();">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
