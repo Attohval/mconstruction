@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MConstruction - Premier Construction & Property Management Services">
-    <meta name="theme-color" content="#E63946">
-    <title>MConstruction - Premium Building Solutions</title>
+    <meta name="theme-color" content="#D65B35">
+    <title>MConstruction | Building with Purpose</title>
+    <link rel="canonical" href="https://mconstruction.com.ng/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body>
+<body class="home-page">
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-content">
@@ -23,7 +24,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-container">
             <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
                 <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="MConstruction Logo">
@@ -37,103 +38,105 @@
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Home Page -->
 
-    <div id="home" class="page active">
+    <main id="home" class="page active">
         <!-- Hero Section with Carousel -->
         <section class="hero">
             <div class="carousel">
-                <div class="carousel-slide active">
+                <div class="carousel-slide active" aria-hidden="false">
                     <img src="images/hero-construction-site.png" alt="High-rise construction site with crane">
                     <div class="carousel-overlay"></div>
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" aria-hidden="true">
                     <img src="images/hero-property-management.png" alt="Managed commercial property portfolio">
                     <div class="carousel-overlay"></div>
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" aria-hidden="true">
                     <img src="images/hero-residential-development.png" alt="Residential estate development">
                     <div class="carousel-overlay"></div>
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" aria-hidden="true">
                     <img src="images/hero-road-infrastructure.png" alt="Road and infrastructure construction">
                     <div class="carousel-overlay"></div>
                 </div>
-                <div class="carousel-slide">
+                <div class="carousel-slide" aria-hidden="true">
                     <img src="images/hero-interior-fitout.png" alt="Interior fit-out and facility upgrade">
                     <div class="carousel-overlay"></div>
                 </div>
 
                 <div class="carousel-content">
+                    <p class="hero-eyebrow"><span></span> MConstruction | Built with purpose</p>
                     <h1 id="heroTitle">Building Your Dreams</h1>
                     <p id="heroSubtitle">Premium Construction & Property Management Services</p>
                     <div class="carousel-buttons">
-                        <button class="btn btn-primary" onclick="goToPage('contact')">Get a Quote</button>
+                        <button class="btn btn-primary" onclick="goToPage('contact', 'quote')">Get a Quote</button>
                         <button class="btn btn-secondary" onclick="goToPage('projects')">Our Projects</button>
                     </div>
                 </div>
 
                 <div class="carousel-indicators">
-                    <span class="indicator active" onclick="currentSlide(0)"></span>
-                    <span class="indicator" onclick="currentSlide(1)"></span>
-                    <span class="indicator" onclick="currentSlide(2)"></span>
-                    <span class="indicator" onclick="currentSlide(3)"></span>
-                    <span class="indicator" onclick="currentSlide(4)"></span>
+                    <button class="indicator active" type="button" aria-label="Show construction project" aria-pressed="true" onclick="currentSlide(0)"></button>
+                    <button class="indicator" type="button" aria-label="Show property management project" aria-pressed="false" onclick="currentSlide(1)"></button>
+                    <button class="indicator" type="button" aria-label="Show residential project" aria-pressed="false" onclick="currentSlide(2)"></button>
+                    <button class="indicator" type="button" aria-label="Show infrastructure project" aria-pressed="false" onclick="currentSlide(3)"></button>
+                    <button class="indicator" type="button" aria-label="Show interior project" aria-pressed="false" onclick="currentSlide(4)"></button>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="section">
+        <section class="section home-about">
             <div class="container">
                 <div class="about-content reveal">
                     <div class="about-img">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=600&fit=crop" alt="Company office">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=600&fit=crop" alt="Modern workspace" loading="lazy" decoding="async">
                     </div>
                     <div class="about-text">
-                        <h3>Why Choose Us?</h3>
+                        <p class="section-eyebrow">A better way to build</p>
                         <h2>Excellence in Every Project</h2>
                         <p>With over 20 years of experience in the construction industry, MConstruction has established itself as a leader in delivering world-class projects. Our commitment to quality, innovation, and customer satisfaction sets us apart.</p>
                         <p>We believe in building lasting relationships with our clients through transparency, reliability, and exceptional craftsmanship.</p>
-                        <div class="feature-list">
-                            <div class="feature-item">
+                        <ul class="feature-list">
+                            <li class="feature-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>20+ Years of Industry Experience</span>
-                            </div>
-                            <div class="feature-item">
+                            </li>
+                            <li class="feature-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>500+ Successfully Completed Projects</span>
-                            </div>
-                            <div class="feature-item">
+                            </li>
+                            <li class="feature-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>Award-Winning Design & Engineering</span>
-                            </div>
-                            <div class="feature-item">
+                            </li>
+                            <li class="feature-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>Certified & Insured Professionals</span>
-                            </div>
-                            <div class="feature-item">
+                            </li>
+                            <li class="feature-item">
                                 <i class="fas fa-check-circle"></i>
                                 <span>On-Time & On-Budget Delivery</span>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Services -->
-        <section class="section" style="background: var(--gray-light);">
+        <section class="section home-services">
             <div class="container">
                 <div class="section-title reveal">
+                    <p class="section-eyebrow">What we do</p>
                     <h2>Our Services</h2>
                     <p>Comprehensive construction and property management solutions tailored to your needs</p>
                 </div>
@@ -173,35 +176,36 @@
         </section>
 
         <!-- Featured Projects -->
-        <section class="section">
+        <section class="section home-projects">
             <div class="container">
                 <div class="section-title reveal">
+                    <p class="section-eyebrow">Selected work</p>
                     <h2>Featured Projects</h2>
                     <p>Showcasing our most impressive and innovative constructions</p>
                 </div>
                 <div class="grid-3 reveal">
                     <div class="project-item">
-                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=300&fit=crop" alt="Modern Office Complex">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=300&fit=crop" alt="Modern Office Complex" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <h3>Modern Office Complex</h3>
                             <p>State-of-the-art commercial building</p>
-                            <a href="#" class="project-btn" onclick="openProjectModal('Modern Office Complex', 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop', 'A stunning 50-story commercial complex featuring modern architecture and sustainable design. Completed in 2023.'); return false;">View Details</a>
+                            <button class="project-btn" type="button" aria-haspopup="dialog" onclick="openProjectModal('Modern Office Complex', 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop', 'A stunning 50-story commercial complex featuring modern architecture and sustainable design. Completed in 2023.')">View Details</button>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=300&fit=crop" alt="Luxury Residential Tower">
+                        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=300&fit=crop" alt="Luxury Residential Tower" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <h3>Luxury Residential Tower</h3>
                             <p>Premium living spaces with world-class amenities</p>
-                            <a href="#" class="project-btn" onclick="openProjectModal('Luxury Residential Tower', 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop', 'An exquisite 35-story residential tower featuring 250 luxury apartments with premium finishes and amenities. Completed in 2023.'); return false;">View Details</a>
+                            <button class="project-btn" type="button" aria-haspopup="dialog" onclick="openProjectModal('Luxury Residential Tower', 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop', 'An exquisite 35-story residential tower featuring 250 luxury apartments with premium finishes and amenities. Completed in 2023.')">View Details</button>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=400&h=300&fit=crop" alt="Urban Development">
+                        <img src="images/hero-property-management.png" alt="Commercial property portfolio" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <h3>Urban Development Zone</h3>
                             <p>Mixed-use development transforming the city</p>
-                            <a href="#" class="project-btn" onclick="openProjectModal('Urban Development Zone', 'https://images.unsplash.com/photo-1577010748066-2e0e3f41c580?w=800&h=600&fit=crop', 'A comprehensive urban development project featuring retail, residential, and office spaces. A landmark transformation of the city center. Completed in 2023.'); return false;">View Details</a>
+                            <button class="project-btn" type="button" aria-haspopup="dialog" onclick="openProjectModal('Urban Development Zone', 'images/hero-property-management.png', 'A comprehensive urban development project featuring retail, residential, and office spaces. A landmark transformation of the city center. Completed in 2023.')">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -212,7 +216,7 @@
         </section>
 
         <!-- Statistics Section -->
-        <section class="stats">
+        <section class="stats home-stats">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item reveal">
@@ -236,15 +240,16 @@
         </section>
 
         <!-- Testimonials -->
-        <section id="testimonials" class="section" style="background: var(--gray-light);">
+        <section id="testimonials" class="section home-testimonials">
             <div class="container">
                 <div class="section-title reveal">
+                    <p class="section-eyebrow">Client stories</p>
                     <h2>What Our Clients Say</h2>
                     <p>Testimonials from satisfied clients worldwide</p>
                 </div>
                 <div class="grid-3 reveal">
                     <div class="testimonial-card">
-                        <div class="stars">
+                        <div class="stars" aria-label="5 out of 5 stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -253,7 +258,7 @@
                         </div>
                         <p>"MConstruction delivered our project exactly as promised. Their professionalism and attention to detail are exceptional. Highly recommended!"</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/50?img=1" alt="Client" class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/50?img=1" alt="John Smith" class="testimonial-avatar" loading="lazy" decoding="async">
                             <div class="testimonial-info">
                                 <h4>John Smith</h4>
                                 <p>CEO, Tech Innovations Inc.</p>
@@ -261,7 +266,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">
+                        <div class="stars" aria-label="5 out of 5 stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -270,7 +275,7 @@
                         </div>
                         <p>"Working with MConstruction was a game-changer. Their team brought our vision to life with precision and innovation. Outstanding service!"</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/50?img=2" alt="Client" class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/50?img=2" alt="Sarah Johnson" class="testimonial-avatar" loading="lazy" decoding="async">
                             <div class="testimonial-info">
                                 <h4>Sarah Johnson</h4>
                                 <p>Property Developer</p>
@@ -278,7 +283,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">
+                        <div class="stars" aria-label="5 out of 5 stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -287,7 +292,7 @@
                         </div>
                         <p>"I was impressed with their communication, timeline management, and the final quality of work. They truly care about client satisfaction."</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/50?img=3" alt="Client" class="testimonial-avatar">
+                            <img src="https://i.pravatar.cc/50?img=3" alt="Michael Chen" class="testimonial-avatar" loading="lazy" decoding="async">
                             <div class="testimonial-info">
                                 <h4>Michael Chen</h4>
                                 <p>Architect & Designer</p>
@@ -298,81 +303,71 @@
             </div>
         </section>
 
-        <!-- CTA Banner -->
-        <section class="section">
-            <div class="container">
-                <div class="cta-banner reveal">
-                    <h2>Ready to Start Your Project?</h2>
-                    <p>Let's work together to turn your vision into reality</p>
-                    <button class="btn btn-secondary" onclick="goToPage('contact')">Get in Touch</button>
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ Section -->
-        <section class="section" style="background: var(--gray-light);">
+        <section class="section home-faq">
             <div class="container">
                 <div class="section-title reveal">
+                    <p class="section-eyebrow">Good to know</p>
                     <h2>Frequently Asked Questions</h2>
                     <p>Find answers to common questions about our services and processes</p>
                 </div>
-                <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-list">
                     <div class="faq-item active reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-1" onclick="toggleFaq(this)">
                             <span>How do I request a quote for my project?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Requesting a quote is simple! You can fill out our contact form on the website, call us at +1 (555) 123-4567, or visit our office. Our team will review your project requirements and provide a detailed quote within 48 hours.</p>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1" aria-hidden="false">
+                            <p>Requesting a quote is simple! You can fill out our contact form on the website, call us at <a href="tel:+2348109154248">+2348109154248</a>, or visit our office. Our team will review your project requirements and provide a detailed quote within 48 hours.</p>
                         </div>
                     </div>
 
                     <div class="faq-item reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFaq(this)">
                             <span>What is the typical timeline for a construction project?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2" aria-hidden="true">
                             <p>Project timelines vary based on scope and complexity. Residential projects typically take 6-12 months, while commercial projects may take 12-24 months. We'll provide a detailed timeline during the initial consultation.</p>
                         </div>
                     </div>
 
                     <div class="faq-item reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFaq(this)">
                             <span>Do you offer warranty on completed projects?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3" aria-hidden="true">
                             <p>Yes, we offer comprehensive warranties on all our projects. Structural elements typically come with a 10-year warranty, while other components have 1-5 year warranties depending on the type. Details are included in your contract.</p>
                         </div>
                     </div>
 
                     <div class="faq-item reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4" onclick="toggleFaq(this)">
                             <span>How do you ensure quality control during construction?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="faq-answer-4" aria-hidden="true">
                             <p>Quality is our top priority. We implement rigorous quality control procedures including daily inspections, regular testing, material verification, and compliance checks. Our dedicated QA team ensures every aspect meets our high standards.</p>
                         </div>
                     </div>
 
                     <div class="faq-item reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5" onclick="toggleFaq(this)">
                             <span>Are your projects environmentally friendly?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="faq-answer-5" aria-hidden="true">
                             <p>Sustainability is core to our values. We use eco-friendly materials, implement waste reduction programs, and follow green building standards. Many of our projects are LEED certified or use similar sustainable practices.</p>
                         </div>
                     </div>
 
                     <div class="faq-item reveal">
-                        <div class="faq-question" onclick="toggleFaq(this)">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6" onclick="toggleFaq(this)">
                             <span>Do you handle permits and regulatory requirements?</span>
                             <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
+                        </button>
+                        <div class="faq-answer" id="faq-answer-6" aria-hidden="true">
                             <p>Yes, we handle all permitting, regulatory compliance, and legal requirements. Our experienced team knows local building codes and regulations, ensuring smooth approval processes and compliance throughout the project.</p>
                         </div>
                     </div>
@@ -380,67 +375,19 @@
             </div>
         </section>
 
-        <!-- Latest Blog Posts -->
-        <section class="section" style="background: var(--gray-light);">
+        <section class="section home-cta">
             <div class="container">
-                <div class="section-title reveal">
-                    <h2>Latest News & Insights</h2>
-                    <p>Stay updated with industry trends and project updates</p>
-                </div>
-                <div class="grid-3 reveal">
-                    <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> June 15, 2024</span>
-                                <span><i class="fas fa-user"></i> Admin</span>
-                            </div>
-                            <h3>Sustainable Building Practices in 2024</h3>
-                            <p>Explore the latest sustainable construction methods and eco-friendly materials that are revolutionizing the industry.</p>
-                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                <div class="cta-banner reveal">
+                    <div>
+                        <p class="section-eyebrow">Let’s build something lasting</p>
+                        <h2>Have a project in mind?</h2>
+                        <p>Tell us what you’re planning. We’ll help you take the next step.</p>
                     </div>
-                    <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> June 10, 2024</span>
-                                <span><i class="fas fa-user"></i> Admin</span>
-                            </div>
-                            <h3>Interior Design Trends That Dominate 2024</h3>
-                            <p>Discover the hottest interior design trends that are transforming modern spaces with innovative styles and layouts.</p>
-                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop" alt="Blog post" class="blog-img">
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-calendar"></i> June 5, 2024</span>
-                                <span><i class="fas fa-user"></i> Admin</span>
-                            </div>
-                            <h3>Project Management Best Practices</h3>
-                            <p>Learn the strategies and tools that help us deliver projects on time and within budget consistently.</p>
-                            <a href="blog.html" class="read-more" onclick="goToPage('blog'); return false;">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                    <button class="btn btn-primary" onclick="goToPage('contact')">Talk to our team <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
-
-        <!-- Google Maps -->
-        <section class="section">
-            <div class="container">
-                <div class="section-title reveal">
-                    <h2>Find Us</h2>
-                    <p>Visit our office or reach out for a consultation</p>
-                </div>
-                <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); height: 400px; margin-bottom: 3rem;" class="reveal">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345094707!2d-122.41941592346883!3d37.77492857123166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1c6e05b%3A0xf1f8f8f8f8f8f8f8!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:none;" allowFullScreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
-    </div>
+    </main>
 
     <!-- Footer -->
 
@@ -452,12 +399,6 @@
                         <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="MConstruction Logo">
                     </a>
                     <p>Premier construction and property management services delivering excellence since 2003.</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -474,52 +415,57 @@
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Building Construction</a></li>
-                        <li><a href="#">Road Construction</a></li>
-                        <li><a href="#">Interior Design</a></li>
-                        <li><a href="#">Renovation</a></li>
-                        <li><a href="#">Architecture</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Building Construction</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Road Construction</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Interior Design</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Renovation</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Architecture</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Newsletter</h4>
                     <p>Subscribe to get updates on our latest projects and industry news.</p>
-                    <form onsubmit="submitNewsletter(event)" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                        <input type="email" placeholder="Your email" required style="flex: 1; padding: 0.6rem; border: none; border-radius: 4px;">
-                        <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: var(--transition);" onmouseover="this.transform='scale(1.05)'" onmouseout="this.transform='scale(1)'">Subscribe</button>
+                    <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="newsletter">
+                        <p hidden>
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+                        <label class="visually-hidden" for="newsletter-email">Your email address</label>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+                        <button type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 MConstruction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+                <p>&copy; <span data-current-year></span> MConstruction. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Project Modal -->
     <div id="projectModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
             <div class="modal-header">
                 <h2 id="modalTitle">Project Title</h2>
-                <button class="modal-close" onclick="closeProjectModal()">Ã—</button>
+                <button class="modal-close" type="button" aria-label="Close project details" onclick="closeProjectModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <img id="modalImage" src="" alt="Project" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                <img id="modalImage" alt="" class="modal-image">
                 <p id="modalDescription">Project description goes here.</p>
-                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                    <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
-                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact'); closeProjectModal();">Get Quote</button>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary modal-cancel" onclick="closeProjectModal()">Close</button>
+                    <button class="btn btn-primary" onclick="goToPage('contact', 'quote'); closeProjectModal();">Get Quote</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <div class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
-    </div>
+    <button class="back-to-top" type="button" aria-label="Back to top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>

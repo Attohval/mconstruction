@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MConstruction - Premier Construction & Property Management Services">
-    <meta name="theme-color" content="#E63946">
+    <meta name="theme-color" content="#D65B35">
     <title>Blog - MConstruction</title>
+    <link rel="canonical" href="https://mconstruction.com.ng/blog.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body>
+<body class="interior-page">
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-content">
@@ -23,7 +24,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-container">
             <a href="index.html" class="brand-logo" data-page="home" onclick="goToPage('home'); return false;" aria-label="Go to homepage">
                 <img class="brand-logo__image" src="images/mconstruction-logo-black.png" alt="MConstruction Logo">
@@ -36,11 +37,11 @@
                 <li><a href="team.html" class="nav-link" data-page="team" onclick="goToPage('team'); return false;">Team</a></li>
                 <li><button class="nav-btn" onclick="goToPage('contact')">Contact Us</button></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -150,7 +151,7 @@
                             <i class="fas fa-chevron-down faq-icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Requesting a quote is simple! You can fill out our contact form on the website, call us at +1 (555) 123-4567, or visit our office. Our team will review your project requirements and provide a detailed quote within 48 hours.</p>
+                            <p>Requesting a quote is simple! You can fill out our contact form on the website, call us at <a href="tel:+2348109154248">+2348109154248</a>, or visit our office. Our team will review your project requirements and provide a detailed quote within 48 hours.</p>
                         </div>
                     </div>
 
@@ -218,12 +219,6 @@
                         <img class="footer-logo__image" src="images/mconstruction-logo-white.png" alt="MConstruction Logo">
                     </a>
                     <p>Premier construction and property management services delivering excellence since 2003.</p>
-                    <div class="social-links">
-                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -240,26 +235,31 @@
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Building Construction</a></li>
-                        <li><a href="#">Road Construction</a></li>
-                        <li><a href="#">Interior Design</a></li>
-                        <li><a href="#">Renovation</a></li>
-                        <li><a href="#">Architecture</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Building Construction</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Road Construction</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Interior Design</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Renovation</a></li>
+                        <li><a href="services.html" onclick="goToPage('services'); return false;">Architecture</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h4>Newsletter</h4>
                     <p>Subscribe to get updates on our latest projects and industry news.</p>
-                    <form onsubmit="submitNewsletter(event)" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                        <input type="email" placeholder="Your email" required style="flex: 1; padding: 0.6rem; border: none; border-radius: 4px;">
-                        <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: var(--transition);" onmouseover="this.transform='scale(1.05)'" onmouseout="this.transform='scale(1)'">Subscribe</button>
+                    <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="newsletter">
+                        <p hidden>
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+                        <label class="visually-hidden" for="newsletter-email">Your email address</label>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+                        <button type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 MConstruction. All rights reserved. | <a href="#" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-color); text-decoration: none;">Terms of Service</a></p>
+                <p>&copy; <span data-current-year></span> MConstruction. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -272,11 +272,11 @@
                 <button class="modal-close" onclick="closeProjectModal()">Ã—</button>
             </div>
             <div class="modal-body">
-                <img id="modalImage" src="" alt="Project" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                <img id="modalImage" alt="" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
                 <p id="modalDescription">Project description goes here.</p>
                 <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                     <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
-                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact'); closeProjectModal();">Get Quote</button>
+                    <button class="btn btn-secondary" style="background: transparent; color: var(--primary-color); border-color: var(--primary-color);" onclick="goToPage('contact', 'quote'); closeProjectModal();">Get Quote</button>
                 </div>
             </div>
         </div>

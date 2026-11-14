@@ -1,5 +1,12 @@
-﻿        // Page Navigation
-        function goToPage(pageId) {
+// Page Navigation
+function selectContactSubject(subject) {
+    const subjectField = document.getElementById('subject');
+    if (subjectField && Array.from(subjectField.options).some(option => option.value === subject)) {
+        subjectField.value = subject;
+    }
+}
+
+function goToPage(pageId, subject) {
             const pageUrls = {
                 home: 'index.html',
                 about: 'about.html',
@@ -15,7 +22,11 @@
             const currentPage = document.querySelector('.page.active');
 
             if (!targetPage || (currentPage && currentPage.id !== pageId)) {
-                window.location.href = pageUrls[pageId] || 'index.html';
+                const targetUrl = new URL(pageUrls[pageId] || 'index.html', window.location.href);
+                if (pageId === 'contact' && subject) {
+                    targetUrl.searchParams.set('subject', subject);
+                }
+                window.location.href = targetUrl.href;
                 return;
             }
 
@@ -30,11 +41,17 @@
                 activeLink.classList.add('active');
             }
 
+            if (pageId === 'contact' && subject) {
+                selectContactSubject(subject);
+            }
+
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.getElementById('hamburger');
             if (navMenu && hamburger) {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.setAttribute('aria-label', 'Open navigation menu');
             }
 
             window.scrollTo(0, 0);
@@ -45,8 +62,11 @@
 
         if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
+                const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+                hamburger.classList.toggle('active', !isExpanded);
+                navMenu.classList.toggle('active', !isExpanded);
+                hamburger.setAttribute('aria-expanded', String(!isExpanded));
+                hamburger.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
             });
         }
 
@@ -57,6 +77,8 @@
                 if (hamburger && navMenu) {
                     hamburger.classList.remove('active');
                     navMenu.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    hamburger.setAttribute('aria-label', 'Open navigation menu');
                 }
             });
         });
@@ -82,14 +104,21 @@
                 return;
             }
 
-            slides.forEach(slide => slide.classList.remove('active'));
+            index = (index + slides.length) % slides.length;
+            currentSlideIndex = index;
+            slides.forEach((slide, slideIndex) => {
+                const isActive = slideIndex === index;
+                slide.classList.toggle('active', isActive);
+                slide.setAttribute('aria-hidden', String(!isActive));
+            });
             const indicators = document.querySelectorAll('.indicator');
-            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators.forEach((indicator, indicatorIndex) => {
+                const isActive = indicatorIndex === index;
+                indicator.classList.toggle('active', isActive);
+                indicator.setAttribute('aria-pressed', String(isActive));
+            });
             
             slides[index].classList.add('active');
-            if (indicators[index]) {
-                indicators[index].classList.add('active');
-            }
             
             // Update hero text
             const heroTitle = document.getElementById('heroTitle');
@@ -116,9 +145,9 @@
             showSlide(currentSlideIndex);
         }
 
-        // Auto-advance carousel every 3 seconds
-        if (slides.length) {
-            setInterval(nextSlide, 3000);
+        // Avoid automatic motion when the visitor requests reduced motion.
+        if (slides.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            setInterval(nextSlide, 5000);
         }
 
         // Scroll Reveal Animation
@@ -174,14 +203,29 @@
 
         // Project Modal
         function openProjectModal(title, image, description) {
+            const modal = document.getElementById('projectModal');
+            const closeButton = modal.querySelector('.modal-close');
+            modalReturnFocus = document.activeElement;
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalImage').src = image;
+            document.getElementById('modalImage').alt = title;
             document.getElementById('modalDescription').textContent = description;
-            document.getElementById('projectModal').classList.add('active');
+            modal.classList.add('active');
+            closeButton.focus();
         }
 
+        let modalReturnFocus = null;
+
         function closeProjectModal() {
-            document.getElementById('projectModal').classList.remove('active');
+            const modal = document.getElementById('projectModal');
+            if (!modal.classList.contains('active')) {
+                return;
+            }
+
+            modal.classList.remove('active');
+            if (modalReturnFocus instanceof HTMLElement) {
+                modalReturnFocus.focus();
+            }
         }
 
         // Filter Projects
@@ -212,19 +256,38 @@
             const allItems = document.querySelectorAll('.faq-item');
             
             allItems.forEach(faqItem => {
+                const question = faqItem.querySelector('.faq-question');
                 if (faqItem !== item) {
                     faqItem.classList.remove('active');
+                    if (question) {
+                        question.setAttribute('aria-expanded', 'false');
+                    }
+                    const answer = faqItem.querySelector('.faq-answer');
+                    if (answer) {
+                        answer.setAttribute('aria-hidden', 'true');
+                    }
                 }
             });
             
-            item.classList.toggle('active');
+            const isExpanded = item.classList.toggle('active');
+            element.setAttribute('aria-expanded', String(isExpanded));
+            const answer = item.querySelector('.faq-answer');
+            if (answer) {
+                answer.setAttribute('aria-hidden', String(!isExpanded));
+            }
         }
 
         // Click outside modal to close
         window.addEventListener('click', (e) => {
             const modal = document.getElementById('projectModal');
             if (e.target === modal) {
-                modal.classList.remove('active');
+                closeProjectModal();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProjectModal();
             }
         });
 
@@ -233,7 +296,7 @@
 
         window.addEventListener('scroll', () => {
             if (backToTopBtn) {
-                if (window.scrollY > 300) {
+                if (window.scrollY > 1200) {
                     backToTopBtn.classList.add('show');
                 } else {
                     backToTopBtn.classList.remove('show');
@@ -248,29 +311,17 @@
             });
         }
 
-        // Form Submission
-        function submitForm(e) {
-            e.preventDefault();
-            const form = document.getElementById('contactForm');
-            const formData = new FormData(form);
-            
-            // Simulate form submission
-            console.log('Form submitted:', Object.fromEntries(formData));
-            alert('Thank you for your message! We will contact you shortly.');
-            form.reset();
-        }
-
-        // Newsletter Subscription
-        function submitNewsletter(e) {
-            e.preventDefault();
-            const email = e.target.querySelector('input[type="email"]').value;
-            console.log('Newsletter subscription:', email);
-            alert('Thank you for subscribing to our newsletter!');
-            e.target.reset();
-        }
-
         // Initialize page
         document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-current-year]').forEach((year) => {
+                year.textContent = String(new Date().getFullYear());
+            });
+
+            const subject = new URLSearchParams(window.location.search).get('subject');
+            if (subject) {
+                selectContactSubject(subject);
+            }
+
             // Initialize first carousel slide
             showSlide(0);
         });
