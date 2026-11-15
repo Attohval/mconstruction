@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mconstruction.com.ng/sitemap.xml
